@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.continer {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .continer {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .continer {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .continer {
+        width: 1190px;
+    }
+}
+section {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(120deg, #1b377b, #370e46);
+}
+section .continer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+section .continer .to_do_box {
+    background-color: #fff;
+    padding: 30px;
+    padding-bottom: 60px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 100%;
+    position: relative;
+}
+section .continer .to_do_box .title {
+    margin-bottom: 20px;
+    color: #1b377b;
+    font-weight: 900;
+    font-size: 20px;
+}
+section .to_do_box .title i {
+    margin-left: 10px;
+}
+section .continer .to_do_box form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+section .continer .to_do_box form input {
+    border: none;
+    outline: none;
+    background: #eee;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 10px;
+    caret-color: #1b377b;
+}
+section .continer .to_do_box form input::placeholder {
+    font-size: 14px;
+}
+section .continer .to_do_box form .btn {
+    border: none;
+    outline: none;
+    background: orangered;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+.remove_all {
+    outline: none;
+    border: none;
+    background: orangered;
+    color: #fff;
+    padding: 8px 14px 9px 14px;
+    font-size: 12px;
+    text-transform: capitalize;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    position: absolute;
+    right: 25px;
+    bottom: 13px;
+    display: none;
+}
+section .continer .result {
+    padding: 20px 4px 20px 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+section .continer .result div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px 10px 10px;
+    position: relative;
+    cursor: pointer;
+}
+section .continer .result div:not(:last-child) {
+    margin-bottom: 8px;
+}
+section .continer .result div::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -18px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 2px #ddd;
+}
+section .continer .result div p {
+    text-transform: capitalize;
+    font-size: 15px;
+}
+section .continer .result div span i {
+    width: 22px;
+    height: 22px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+section .continer .result div span i:hover {
+    background-color: #ddd;
+}
+section .continer .result div.done p {
+    text-decoration: line-through;
+}
+section .continer .result div.done::after {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    top: 50%;
+    left: -18px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    border: solid 2px orangered;
+    background-color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
